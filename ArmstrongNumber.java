@@ -1,40 +1,21 @@
-public class ArmstrongNumber 
+public class ReverseNumber 
 {
-    	public static void main(String[] args)
+    	public static void main(String[] args) 
 	{
         
-        	int number = 134;
-        	int originalNumber = number;
-        	int sum = 0;
-	        int digits = 0;
-        	for (int temp = number; temp > 0; temp /= 10) 	
-		{
-            		digits++;
-        	}
+        	int number = 12345; 
+        	int reversedNumber = 0;
 
         
         	for (int temp = number; temp > 0; temp /= 10) 
 		{
-            		int digit = temp % 10;
-           	 	int power = 1;
-
-            
-            		for (int i = 0; i < digits; i++) 
-			{
-                		power *= digit;
-            		}
-
-            		sum += power;
+            		int digit = temp % 10; 
+            		reversedNumber = reversedNumber * 10 + digit; 
         	}
 
         
-        	if (sum == originalNumber) 
-		{
-            		System.out.println(originalNumber + " is an Armstrong number.");
-        	} 
-		else 
-		{
-            		System.out.println(originalNumber + " is not an Armstrong number.");
-        	}
-    }
+        	System.out.println("Original number: " + number);
+        	System.out.println("Reversed number: " + reversedNumber);
+    	}
 }
+
